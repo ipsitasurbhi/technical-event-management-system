@@ -20,7 +20,7 @@ A full-stack Event Management System with role-based access for Admin, Vendor, a
 
 ### 🔐 Login Page
 <img width="1919" height="868" alt="Screenshot 2026-04-23 015934" src="https://github.com/user-attachments/assets/0966dbb1-e428-4380-a797-1e1c4439840e" />
-
+###
 <img width="1919" height="867" alt="Screenshot 2026-04-23 015948" src="https://github.com/user-attachments/assets/c747aeee-625b-4c4b-a284-c4dd072c65e5" />
 
 ### 👤 User Dashboard
