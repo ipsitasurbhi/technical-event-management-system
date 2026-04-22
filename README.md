@@ -20,6 +20,7 @@ A full-stack Event Management System with role-based access for Admin, Vendor, a
 
 ### 🔐 Login Page
 <img width="1919" height="868" alt="Screenshot 2026-04-23 015934" src="https://github.com/user-attachments/assets/0966dbb1-e428-4380-a797-1e1c4439840e" />
+
 <img width="1919" height="867" alt="Screenshot 2026-04-23 015948" src="https://github.com/user-attachments/assets/c747aeee-625b-4c4b-a284-c4dd072c65e5" />
 
 ### 👤 User Dashboard
@@ -30,9 +31,13 @@ A full-stack Event Management System with role-based access for Admin, Vendor, a
 
 ### Products 
 <img width="1919" height="863" alt="Screenshot 2026-04-23 020017" src="https://github.com/user-attachments/assets/8f5ba822-13a3-4681-b01b-59620f3774ae" />
+
 <img width="1919" height="869" alt="Screenshot 2026-04-23 020041" src="https://github.com/user-attachments/assets/0b47cfe6-6679-4089-a0a9-158461788e68" />
+
 <img width="1913" height="957" alt="Screenshot 2026-04-23 020048" src="https://github.com/user-attachments/assets/afca3cdc-3306-4fa9-8fba-8a28f1a189ce" />
+
 <img width="1919" height="866" alt="Screenshot 2026-04-23 020112" src="https://github.com/user-attachments/assets/986e49e8-c5a2-4e9f-a6c4-f7aeaa7d809d" />
+
 <img width="1919" height="869" alt="Screenshot 2026-04-23 020127" src="https://github.com/user-attachments/assets/111078fe-7cd6-4cea-aa8b-72e9551501b5" />
 
 ### Guest List - Update and Delete
@@ -43,6 +48,7 @@ A full-stack Event Management System with role-based access for Admin, Vendor, a
 
 ### Checkout
 <img width="1919" height="868" alt="Screenshot 2026-04-23 020216" src="https://github.com/user-attachments/assets/34bb222e-2b06-424e-b34e-8bca00518cdb" />
+
 <img width="1919" height="860" alt="Screenshot 2026-04-23 020239" src="https://github.com/user-attachments/assets/d963f49f-8ecb-45fa-b5a5-f55df65e6751" />
 
 ### Order Status
