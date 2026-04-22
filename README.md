@@ -84,5 +84,7 @@ Cart & checkout system
 Order status tracking
 Clean UI flow based on assignment
 
+---
+
 ### Author
 Ipsita Surbhi
