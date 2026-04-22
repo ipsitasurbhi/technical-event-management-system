@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guest List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Guest List</h2>
+
+  <input id="guestName" placeholder="Enter guest name"><br><br>
+  <button onclick="addGuest()">Add Guest</button>
+
+  <div id="list"></div>
+
+</div>
+
+<script>
+
+// load existing guests
+let guests = JSON.parse(localStorage.getItem("guests")) || [];
+
+function render(){
+  const div = document.getElementById("list");
+  div.innerHTML = "";
+
+  guests.forEach((g, index) => {
+    div.innerHTML += `
+      <p>
+        ${g}
+        <button onclick="removeGuest(${index})">❌</button>
+      </p>
+    `;
+  });
+}
+
+function addGuest(){
+  const name = document.getElementById("guestName").value;
+
+  if(name.trim() === ""){
+    alert("Enter a name");
+    return;
+  }
+
+  guests.push(name);
+  localStorage.setItem("guests", JSON.stringify(guests));
+
+  document.getElementById("guestName").value = "";
+  render();
+}
+
+function removeGuest(index){
+  guests.splice(index, 1);
+  localStorage.setItem("guests", JSON.stringify(guests));
+  render();
+}
+
+render();
+
+</script>
+
+</body>
+</html>

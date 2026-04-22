@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vendor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Welcome Vendor</h2>
+
+  <div class="grid">
+    <button onclick="go('vendor_items.html')">Your Items</button>
+    <button onclick="go('add_item.html')">Add New Item</button>
+    <button onclick="go('vendor_requests.html')">Transactions</button>
+  </div>
+
+  <button onclick="logout()">Logout</button>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+
+function logout(){
+  localStorage.clear();
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

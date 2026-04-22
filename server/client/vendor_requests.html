@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Requests</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>User Requests</h2>
+
+  <div id="orders"></div>
+
+</div>
+
+<script>
+fetch("http://localhost:5000/api/orders")
+.then(res => res.json())
+.then(data => {
+  const div = document.getElementById("orders");
+
+  data.forEach(o => {
+    div.innerHTML += `
+      <div>
+        <p>Total: ₹${o.total}</p>
+        <p>Status: ${o.status}</p>
+
+        <button onclick="updateStatus('${o._id}','approved')">Approve</button>
+        <button onclick="updateStatus('${o._id}','rejected')">Reject</button>
+      </div>
+      <hr>
+    `;
+  });
+});
+
+function updateStatus(id, status){
+  fetch(`http://localhost:5000/api/orders/${id}`, {
+    method: "PUT",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ status })
+  })
+  .then(() => {
+    alert("Updated!");
+    location.reload();
+  });
+}
+</script>
+
+</body>
+</html>

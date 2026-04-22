@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Status</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Your Orders</h2>
+
+  <div id="orders"></div>
+
+</div>
+
+<script>
+fetch("http://localhost:5000/api/orders")
+.then(res => res.json())
+.then(data => {
+  const div = document.getElementById("orders");
+  div.innerHTML = "";
+
+  if(data.length === 0){
+    div.innerHTML = "<p>No orders found</p>";
+    return;
+  }
+
+  data.forEach(o => {
+    div.innerHTML += `
+      <div>
+        <p>Total: ₹${o.total}</p>
+        <p>Status: ${o.status || "pending"}</p>
+      </div>
+      <hr>
+    `;
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <div class="top-bar">
+    <button onclick="goHome()">Home</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <h2>Welcome Admin</h2>
+
+  <div class="grid">
+
+    <!-- Membership -->
+    <div class="card">
+      <h3>Membership</h3>
+      <button onclick="goTo('membership_add.html')">Add</button>
+      <button onclick="goTo('membership_update.html')">Update</button>
+    </div>
+
+    <!-- User Management -->
+    <div class="card">
+      <h3>Maintain User</h3>
+      <button onclick="goTo('user_add.html')">Add</button>
+      <button onclick="goTo('user_update.html')">Update</button>
+    </div>
+
+    <!-- Vendor Management -->
+    <div class="card">
+      <h3>Maintain Vendor</h3>
+      <button onclick="goTo('vendor_add.html')">Add</button>
+      <button onclick="goTo('vendor_update.html')">Update</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function goTo(page){
+  window.location.href = page;
+}
+
+function goHome(){
+  window.location.href = "login.html";
+}
+
+function logout(){
+  localStorage.clear();
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

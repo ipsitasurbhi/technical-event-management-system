@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Item</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Add New Item</h2>
+
+  <input id="name" placeholder="Product Name"><br><br>
+  <input id="price" placeholder="Price"><br><br>
+
+  <button onclick="addItem()">Add Item</button>
+
+</div>
+
+<script>
+function addItem(){
+  const name = document.getElementById("name").value;
+  const price = document.getElementById("price").value;
+
+  fetch("http://localhost:5000/api/products", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({
+      name,
+      price,
+      vendor: "Vendor"
+    })
+  })
+  .then(res => res.json())
+  .then(() => {
+    alert("Item Added!");
+  });
+}
+</script>
+
+</body>
+</html>

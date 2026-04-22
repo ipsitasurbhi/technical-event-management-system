@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>WELCOME USER</h2>
+
+  <div class="grid">
+
+    <button onclick="go('vendor_list.html')">Vendor</button>
+    <button onclick="go('cart.html')">Cart</button>
+    <button onclick="go('guest.html')">Guest List</button>
+    <button onclick="go('order_status.html')">Order Status</button>
+
+  </div>
+
+  <button onclick="logout()">Logout</button>
+
+</div>
+
+<script>
+function go(page){
+  window.location.href = page;
+}
+
+function logout(){
+  localStorage.clear();
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

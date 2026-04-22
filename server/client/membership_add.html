@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Membership</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Add Membership</h2>
+
+  <label>Membership Type:</label><br><br>
+
+  <input type="radio" name="plan" value="6months" checked> 6 Months<br>
+  <input type="radio" name="plan" value="1year"> 1 Year<br>
+  <input type="radio" name="plan" value="2years"> 2 Years<br><br>
+
+  <button onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+function submitForm(){
+  alert("Membership Added!");
+}
+</script>
+
+</body>
+</html>

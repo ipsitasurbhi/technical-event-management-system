@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Event Management System</h1>
+
+  <input id="email" placeholder="Email / ID"><br><br>
+  <input id="password" type="password" placeholder="Password"><br><br>
+
+  <select id="role">
+    <option value="user">User</option>
+    <option value="vendor">Vendor</option>
+    <option value="admin">Admin</option>
+  </select><br><br>
+
+  <button onclick="login()">Login</button>
+
+</div>
+
+<script>
+function login(){
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const roleSelected = document.getElementById("role").value;
+
+  // ADMIN LOGIN 
+  if(roleSelected === "admin"){
+    if(email === "admin" && password === "admin"){
+      window.location.href = "admin_dashboard.html";
+    } else {
+      alert("Invalid admin credentials");
+    }
+    return;
+  }
+
+  // USER / VENDOR LOGIN (backend)
+  fetch("http://localhost:5000/api/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ email, password })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log("Response:", data);
+
+    if(!data.role){
+      alert("Login failed");
+      return;
+    }
+
+    if(data.role === "user" && roleSelected === "user"){
+      window.location.href = "user_dashboard.html";
+    } 
+    else if(data.role === "vendor" && roleSelected === "vendor"){
+      window.location.href = "vendor_dashboard.html";
+    }
+    else {
+      alert("Role mismatch! Select correct role.");
+    }
+  })
+  .catch(err => {
+    console.log(err);
+    alert("Server error");
+  });
+}
+</script>
+
+</body>
+</html>

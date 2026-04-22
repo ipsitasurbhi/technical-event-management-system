@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vendors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h2>Select Vendor Category</h2>
+
+  <select onchange="goProducts(this.value)">
+    <option value="">Select</option>
+    <option value="catering">Catering</option>
+    <option value="florist">Florist</option>
+    <option value="decoration">Decoration</option>
+    <option value="lighting">Lighting</option>
+  </select>
+
+</div>
+
+<script>
+function goProducts(category){
+  if(category){
+    localStorage.setItem("category", category);
+    window.location.href = "products.html";
+  }
+}
+</script>
+
+</body>
+</html>
