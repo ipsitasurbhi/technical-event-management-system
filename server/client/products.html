@@ -8,7 +8,6 @@
 
 <div class="container">
 
-  <!-- 🔙 Back Button -->
   <button onclick="goBack()">⬅ Back</button>
 
   <h1>Products</h1>
@@ -19,24 +18,23 @@
 
 <script>
 
-// 🔙 Back function
 function goBack(){
   window.location.href = "user_dashboard.html";
 }
 
-// 🛒 Load cart
+// Load cart
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// 📦 Get selected category
+// Get selected category
 let selectedCategory = localStorage.getItem("category");
 
-// 📦 Fetch products
+// Fetch products
 fetch("http://localhost:5000/api/products")
 .then(res => res.json())
 .then(data => {
   const container = document.getElementById("products");
 
-  // ✅ FILTER
+  // Filter
   const filtered = selectedCategory 
     ? data.filter(p => p.category === selectedCategory)
     : data;
@@ -52,7 +50,7 @@ fetch("http://localhost:5000/api/products")
   });
 });
 
-// ➕ Add to cart
+// Add to cart
 function addToCart(name, price){
   cart.push({name, price});
   localStorage.setItem("cart", JSON.stringify(cart));

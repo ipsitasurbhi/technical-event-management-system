@@ -11,7 +11,7 @@ app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/products", require("./routes/productRoutes"));
 app.use("/api/orders", require("./routes/orderRoutes"));
 
-// 🔥 MongoDB Connection
+// MongoDB Connection
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB Connected ✅"))
 .catch(err => console.log(err));

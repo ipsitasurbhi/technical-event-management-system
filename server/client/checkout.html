@@ -36,7 +36,7 @@ function placeOrder(){
 
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 
-  // ✅ SEND TO BACKEND
+  // SEND TO BACKEND
   fetch("http://localhost:5000/api/orders", {
     method: "POST",
     headers: {
@@ -52,10 +52,10 @@ function placeOrder(){
   .then(data => {
     console.log("Order saved:", data);
 
-    // ✅ CLEAR CART
+    // CLEAR CART
     localStorage.removeItem("cart");
 
-    // ✅ REDIRECT
+    // REDIRECT
     window.location.href = "success.html";
   })
   .catch(err => {
