@@ -118,13 +118,13 @@ node app.js
 Open client/index.html using Live Server.
 
 ### Highlights
-Role-based authentication
-Category-based product filtering
-Cart & checkout system
-Order status tracking
-Clean UI flow based on assignment
+- Role-based authentication.
+- Category-based product filtering.
+- Cart & checkout system.
+- Order status tracking.
+- Clean UI flow based on assignment.
 
 ---
 
 ### Author
-Ipsita Surbhi
+Ipsita Surbhi.
