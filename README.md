@@ -42,13 +42,14 @@ A full-stack Event Management System with role-based access for Admin, Vendor, a
 ---
 
 ## 📁 Project Structure
+```
 technical-event-management/
 │
 ├── client/ # Frontend (HTML, CSS, JS)
 ├── server/ # Backend (Node.js, Express)
 ├── .env # Environment variables (not uploaded)
 ├── package.json
-
+```
 ---
 
 ## ⚙️ Setup Instructions
