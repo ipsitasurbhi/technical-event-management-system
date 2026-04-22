@@ -28,7 +28,7 @@ A full-stack Event Management System with role-based access for Admin, Vendor, a
 ### Vendor Category Selection 
 <img width="1919" height="864" alt="Screenshot 2026-04-23 020008" src="https://github.com/user-attachments/assets/c1ee9cb6-979e-442a-b97a-8dc072ac0a2d" />
 
-### Products - Food
+### Products 
 <img width="1919" height="863" alt="Screenshot 2026-04-23 020017" src="https://github.com/user-attachments/assets/8f5ba822-13a3-4681-b01b-59620f3774ae" />
 <img width="1919" height="869" alt="Screenshot 2026-04-23 020041" src="https://github.com/user-attachments/assets/0b47cfe6-6679-4089-a0a9-158461788e68" />
 <img width="1913" height="957" alt="Screenshot 2026-04-23 020048" src="https://github.com/user-attachments/assets/afca3cdc-3306-4fa9-8fba-8a28f1a189ce" />
